@@ -2,7 +2,9 @@
  * File:   header2.h
  * Author: DDC
  *this header 2 is added as te r2_header modification
- * Created on October 26, 2017, 12:14 PM
+ * Created on October 26, 2017, 12:14 
+ * release after bug fixed
+ * 
  */
 
 #ifndef HEADER2_H
