@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=newfile.c
+SOURCEFILES_QUOTED_IF_SPACED=newfile.c newfile1.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/newfile.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/newfile.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/newfile.o ${OBJECTDIR}/newfile1.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/newfile.o.d ${OBJECTDIR}/newfile1.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/newfile.o
+OBJECTFILES=${OBJECTDIR}/newfile.o ${OBJECTDIR}/newfile1.o
 
 # Source Files
-SOURCEFILES=newfile.c
+SOURCEFILES=newfile.c newfile1.c
 
 
 CFLAGS=
@@ -106,12 +106,24 @@ ${OBJECTDIR}/newfile.o: newfile.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/newfile.o 
 	@${FIXDEPS} "${OBJECTDIR}/newfile.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/newfile.o.d" -o ${OBJECTDIR}/newfile.o newfile.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/newfile1.o: newfile1.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/newfile1.o.d 
+	@${RM} ${OBJECTDIR}/newfile1.o 
+	@${FIXDEPS} "${OBJECTDIR}/newfile1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/newfile1.o.d" -o ${OBJECTDIR}/newfile1.o newfile1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/newfile.o: newfile.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/newfile.o.d 
 	@${RM} ${OBJECTDIR}/newfile.o 
 	@${FIXDEPS} "${OBJECTDIR}/newfile.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/newfile.o.d" -o ${OBJECTDIR}/newfile.o newfile.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/newfile1.o: newfile1.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/newfile1.o.d 
+	@${RM} ${OBJECTDIR}/newfile1.o 
+	@${FIXDEPS} "${OBJECTDIR}/newfile1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/newfile1.o.d" -o ${OBJECTDIR}/newfile1.o newfile1.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 
